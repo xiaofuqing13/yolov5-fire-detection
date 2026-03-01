@@ -2,9 +2,11 @@
 
 基于 YOLOv5 的实时火灾检测系统，集成 PyQt5 图形化操作界面，支持摄像头实时检测、视频文件检测和图片检测，并具备火灾报警功能。
 
-## 项目目的
+## 痛点与目的
 
-利用 YOLOv5 目标检测算法实现对火灾/火焰的实时智能识别，结合图形化界面降低使用门槛，为消防安全、工业监控等场景提供快速部署的智能火灾预警方案。
+- **问题**：传统消防监控依赖人眼盯视频画面，7×24 小时值守不现实，火情发现滞后导致损失扩大
+- **方案**：用 YOLOv5 训练火焰检测模型，接入摄像头或视频源自动识别火灾，检测到火焰立刻报警提醒
+- **效果**：PyQt5 图形界面一键操作，支持摄像头实时流、视频文件和图片三种检测模式，发现火情自动播放报警音效
 
 ## 核心功能
 
@@ -19,13 +21,13 @@
 
 ```
 输入源（摄像头 / 视频 / 图片）
-    
+    ↓
 PyQt5 图形界面（window.py）
-    
+    ↓
 YOLOv5 推理引擎（detect + 预训练权重）
-    
+    ↓
 NMS 后处理 + 目标框绘制
-    
+    ↓
 实时显示检测结果 + 火灾报警
 ```
 
@@ -55,18 +57,18 @@ python train.py --img 640 --batch 16 --epochs 100 --data data/fire.yaml --weight
 
 ```
 .
- window.py                     # PyQt5 图形化检测界面（主程序）
- fire_alert.wav.wav            # 火灾报警音效
- yolov5-fire-42-master/        # YOLOv5 核心代码
-     train.py                  # 模型训练
-     detect.py                 # 推理检测
-     val.py                    # 模型验证
-     export.py                 # 模型导出
-     models/                   # 网络结构定义
-     utils/                    # 工具函数
-     data/                     # 数据集配置
-     pretrained/               # 预训练权重
-     requirements.txt          # 依赖列表
+├── window.py                     # PyQt5 图形化检测界面（主程序）
+├── fire_alert.wav.wav            # 火灾报警音效
+└── yolov5-fire-42-master/        # YOLOv5 核心代码
+    ├── train.py                  # 模型训练
+    ├── detect.py                 # 推理检测
+    ├── val.py                    # 模型验证
+    ├── export.py                 # 模型导出
+    ├── models/                   # 网络结构定义
+    ├── utils/                    # 工具函数
+    ├── data/                     # 数据集配置
+    ├── pretrained/               # 预训练权重
+    └── requirements.txt          # 依赖列表
 ```
 
 ## 适用场景
@@ -75,7 +77,6 @@ python train.py --img 640 --batch 16 --epochs 100 --data data/fire.yaml --weight
 - 工业厂房安全监控
 - 森林防火巡检
 - 视频监控智能分析
-- 目标检测与 GUI 集成开发学习
 
 ## 技术栈
 
