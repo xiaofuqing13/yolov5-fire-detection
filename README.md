@@ -81,6 +81,14 @@ python train.py --img 640 --batch 16 --epochs 100 --data data/fire.yaml --weight
 
 ![视频检测结果](images/fire_video_result.jpg)
 
+### 夜间场景检测
+
+![夜间检测](images/fire_detection_night.png)
+
+### PyQt5 操作界面
+
+![操作界面](images/pyqt5_gui.png)
+
 ## 适用场景
 
 - 智慧消防与火灾预警
