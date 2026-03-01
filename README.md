@@ -71,6 +71,16 @@ python train.py --img 640 --batch 16 --epochs 100 --data data/fire.yaml --weight
     └── requirements.txt          # 依赖列表
 ```
 
+## 检测效果展示
+
+### 图片检测结果
+
+![火灾检测结果](images/fire_detection_result.jpg)
+
+### 视频帧检测结果
+
+![视频检测结果](images/fire_video_result.jpg)
+
 ## 适用场景
 
 - 智慧消防与火灾预警
