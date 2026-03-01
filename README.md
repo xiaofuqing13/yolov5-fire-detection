@@ -1,5 +1,8 @@
 # YOLOv5 火灾检测系统
 
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![YOLOv5](https://img.shields.io/badge/YOLOv5-Ultralytics-blue) ![License](https://img.shields.io/badge/License-MIT-green)
+
+
 基于 YOLOv5 的实时火灾检测系统，集成 PyQt5 图形化操作界面，支持摄像头实时检测、视频文件检测和图片检测，并具备火灾报警功能。
 
 ## 痛点与目的
