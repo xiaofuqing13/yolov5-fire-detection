@@ -1,4 +1,4 @@
-﻿# YOLOv5 火灾检测系统
+# YOLOv5 火灾检测系统
 
 基于 YOLOv5 的实时火灾检测系统，集成 PyQt5 图形化操作界面，支持摄像头实时检测、视频文件检测和图片检测，并具备火灾报警功能。
 
@@ -106,6 +106,6 @@ python train.py --img 640 --batch 16 --epochs 100 --data data/fire.yaml --weight
 | 图像处理 | OpenCV |
 | 报警音效 | WAV 音频播放 |
 
-## License
+## 许可证
 
 GPL-3.0 License
